@@ -1,4 +1,4 @@
 class Image < ApplicationRecord
-  validatates presence: true
+  validatates :photo_url, presence: true
   belongs_to :project
 end
