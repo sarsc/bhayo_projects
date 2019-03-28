@@ -1,5 +1,5 @@
-class ProjectsController < ApplicationControlle
-  before_action :set_project, only: [:show, :create]
+class ProjectsController < ApplicationController
+  before_action :set_project, only: [:show]
 
   def index
     @projects = Project.all
@@ -13,11 +13,17 @@ class ProjectsController < ApplicationControlle
   end
 
   def create
+    @project = Project.new(project_params)
+    @project.save ? (redirect_to project_path(@project)) : (render 'new')
   end
 
   private
 
-  def set_projects
-    @project = Project.find(:id)
+  def set_project
+    @project = Project.find(params[:id])
+  end
+
+  def project_params
+    params.require(:project).permit(:name, :client)
   end
 end
