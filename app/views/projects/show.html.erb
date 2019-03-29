@@ -1,9 +1,9 @@
 <h1>PROJECT</h1>
 
-<div>
+<div class="images-container">
   <div class="slider">
   <% @project.images.each do |image| %>
-    <div> <%= cl_image_tag image.photo_url %></div>
+    <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %></div>
   <% end %>
   </div>
 </div>

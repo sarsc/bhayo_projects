@@ -6,7 +6,7 @@
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <link href="/lib/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
@@ -20,7 +20,9 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
      <script>
       $(document).ready(function(){
-        $('.slider').bxSlider();
+        $('.slider').bxSlider({
+          slideWidth: 800
+        });
       });
   </script>
   </body>
