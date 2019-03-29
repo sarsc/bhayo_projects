@@ -1,9 +1,11 @@
 <h1>PROJECT</h1>
 
 <div>
+  <div class="slider">
   <% @project.images.each do |image| %>
-    <%= cl_image_tag image.photo_url %>
+    <div> <%= cl_image_tag image.photo_url %></div>
   <% end %>
+  </div>
 </div>
 <div>
   <%= @project.name %>
