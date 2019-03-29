@@ -1,4 +1,10 @@
 <h1>PROJECT</h1>
+
+<div>
+  <% @project.images.each do |image| %>
+    <%= cl_image_tag image.photo_url %>
+  <% end %>
+</div>
 <div>
   <%= @project.name %>
   <%= @project.client %>
