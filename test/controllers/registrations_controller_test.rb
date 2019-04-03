@@ -5,4 +5,3 @@ class RegistrationsControllerTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 end
-
