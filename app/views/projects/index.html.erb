@@ -1,0 +1,7 @@
+PROJECTS
+
+
+<% @projects.each do |project| %>
+<%= project.name %>
+<%= link_to "Project", project_path(project)%>
+<% end %>
