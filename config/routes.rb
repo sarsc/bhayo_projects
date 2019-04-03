@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :projects do
     resources :images, only: [:new, :create, :edit, :update]
   end
+
+  resources :users, only: [:show]
 end
