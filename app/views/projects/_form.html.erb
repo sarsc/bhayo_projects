@@ -1,5 +1,6 @@
 <%= simple_form_for(@project) do |f|%>
   <%= f.input :name %>
   <%= f.input :client %>
+  <%= f.input :category, as: :select, collection: ["Landscape design", "Urban and Planning design", "Interior design", "Events and Festivals", "Corporate"]%>
   <%= f.submit "Add project", class: "btn btn-primary" %>
 <% end %>
