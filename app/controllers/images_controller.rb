@@ -1,5 +1,4 @@
 class ImagesController < ApplicationController
-  before_action :project_id
   before_action :set_image, only: [:edit, :update]
 
   def new
@@ -7,6 +6,7 @@ class ImagesController < ApplicationController
   end
 
   def create
+    @project = Project.find(params[:project_id])
     @image = Image.new(image_params)
     @image.project = @project
     if @image.save
@@ -21,17 +21,13 @@ class ImagesController < ApplicationController
 
   def update
     @image.update(image_params)
-    redirect_to project_path(@project)
+    redirect_to project_path(@image.project)
   end
 
   private
 
   def image_params
     params.require(:image).permit(:photo_url)
-  end
-
-  def project_id
-    @project = Project.find(params[:project_id])
   end
 
   def set_image
