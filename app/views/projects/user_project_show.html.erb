@@ -4,6 +4,7 @@
   <div>
   <% @project.images.each do |image| %>
     <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %></div>
+    <%= link_to 'edit', edit_project_image_path(image) %>
   <% end %>
   </div>
 </div>
