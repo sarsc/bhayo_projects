@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   def show
     # @image = Image.new
     if user_signed_in?
-      render 'user_project_show'
+      render 'user-project-show'
     else render 'show'
     end
   end
