@@ -11,6 +11,10 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    if user_signed_in?
+      render 'user_project_show'
+    else render 'show'
+    end
   end
 
   def new

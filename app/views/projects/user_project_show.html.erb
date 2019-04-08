@@ -1,0 +1,19 @@
+<h1>PROJECT</h1>
+
+<div class="images-container">
+  <div>
+  <% @project.images.each do |image| %>
+    <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %></div>
+  <% end %>
+  </div>
+</div>
+<div>
+  <%= @project.name %>
+  <%= @project.client %>
+</div>
+
+<% if current_user %>
+  <%= link_to "edit", edit_project_path(@project) %>
+  <%= link_to "Add an image",  new_project_image_path(@project) %>
+<% end %>
+
