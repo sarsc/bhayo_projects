@@ -1,13 +1,12 @@
-PROJECTS
+
 
 <div class="projects-container">
   <% @projects.each do |project| %>
     <div class="project-card">
       <div class= "bg">
-
-      <div class="project-name">
-        <%= link_to project.name, project_path(project)%>
-      </div>
+        <div class="project-name">
+          <%= link_to project.name, project_path(project), class: "link-project"%>
+        </div>
       </div>
 
       <!-- cl_image_tag project.images.first.photo_url -->
