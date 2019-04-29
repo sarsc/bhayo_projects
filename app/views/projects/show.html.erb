@@ -1,14 +1,18 @@
 <!-- <div class="images-container"> -->
 <div class="owl-carousel">
-  <!-- <div class="slider"> -->
   <% @project.images.each do |image| %>
     <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %> </div>
   <% end %>
 </div>
-<!-- </div> -->
 <div>
-  <%= @project.name %>
-  <%= @project.client %>
+  <div>
+    <p>Description:</p>
+    <p><%= @project.description %></p>
+  </div>
+  <div>
+    <p><%= @project.name %></p>
+    <p><%= @project.client %></p>
+  </div>
 </div>
 
 <% if current_user %>
