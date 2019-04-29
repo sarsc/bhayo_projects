@@ -6,7 +6,8 @@
     <title>TODO</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
@@ -16,19 +17,35 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-     <script>
-      $(document).ready(function(){
-        $('.slider').bxSlider({
-          slideWidth: 1000,
-          slideMargin: 10,
-          minSlides: 1,
-          // ticker: true,
-          // speed: 5000
-
-        });
-      });
-  </script>
   </body>
+
+  <script type="text/javascript" >
+    $(".owl-carousel").owlCarousel({
+      loop:true,
+      margin: 20,
+      autoWidth:true,
+      items:4
+    });
+
+  //     $(document).ready(function() {
+
+  // $("#owl-carousel").owlCarousel({
+
+  // navigation: true, // Show next and prev buttons
+  // slideSpeed: 300,
+  // paginationSpeed: 400,
+  // singleItem: true
+
+  // "singleItem:true" is a shortcut for:
+  // items : 1,
+  // itemsDesktop : false,
+  // itemsDesktopSmall : false,
+  // itemsTablet: false,
+  // itemsMobile : false
+
+  // });
+
+  // });
+
+    </script>
 </html>
