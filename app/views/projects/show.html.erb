@@ -1,15 +1,14 @@
 <!-- <div class="images-container"> -->
-<div class="owl-carousel">
+<div class="owl-carousel carousel-height">
   <% @project.images.each do |image| %>
     <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %> </div>
   <% end %>
 </div>
-<div>
-  <div>
-    <p>Description:</p>
+<div class="project-info-container">
+  <div class="description">
     <p><%= @project.description %></p>
   </div>
-  <div>
+  <div class="project-info">
     <p><%= @project.name %></p>
     <p><%= @project.client %></p>
   </div>
@@ -17,6 +16,6 @@
 
 <% if current_user %>
   <%= link_to "edit", edit_project_path(@project) %>
-  <%= link_to "Add an image",  new_project_image_path(@project) %>
+  <%= link_to "Add an image", new_project_image_path(@project) %>
 <% end %>
 
