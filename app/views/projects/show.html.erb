@@ -1,7 +1,7 @@
 <!-- <div class="images-container"> -->
 <div class="owl-carousel carousel-height">
   <% @project.images.each do |image| %>
-    <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %> </div>
+    <div> <%= cl_image_tag image.photo_url, height: 600, crop: :fill %> </div>
   <% end %>
 </div>
 <div class="project-info-container">
