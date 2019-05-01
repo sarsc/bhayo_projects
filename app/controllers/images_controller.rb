@@ -2,6 +2,7 @@ class ImagesController < ApplicationController
   before_action :set_image, only: [:edit, :update]
 
   def new
+    @project = Project.find(params[:project_id])
     @image = Image.new
   end
 

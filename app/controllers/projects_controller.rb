@@ -20,7 +20,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @image = Image.new
+    # @image = Image.new
   end
 
   def create

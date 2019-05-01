@@ -13,8 +13,8 @@
   <%= @project.client %>
 </div>
 
-<% if current_user %>
+
   <%= link_to "edit", edit_project_path(@project) %>
   <%= link_to "Add an image",  new_project_image_path(@project) %>
-<% end %>
+
 
