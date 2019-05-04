@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :projects do
     resources :images, only: [:new, :create]
   end
-  resources :images, only: [:edit, :update]
+  resources :images, only: [:edit, :update, :destroy]
   resources :users, only: [:show]
 end

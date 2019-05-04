@@ -11,7 +11,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    # @image = Image.new
     if user_signed_in?
       render 'user-project-show'
     else render 'show'
@@ -20,7 +19,6 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    # @image = Image.new
   end
 
   def create
