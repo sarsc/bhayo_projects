@@ -1,15 +1,18 @@
 .image-form {
-  margin: 30px;
+  margin-top: 30px;
   padding: 40px;
+  width: 400px;
   height: 300px;
   background: white;
 }
 
 .left-section {
   width: 50%;
+  padding-right: 50px;
 }
 
 .right-section {
   width: 50%;
   overflow: scroll;
+  max-height: 100vh;
 }
