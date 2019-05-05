@@ -3,14 +3,21 @@
 <div class="projects-container">
   <% @projects.each do |project| %>
     <div class="project-card">
-      <div class= "bg-project" style="background-image: linear-gradient(rgba(226,226,226,0.3), rgba(226,226,226,0.3)), url(<%= cl_image_path project.images.first.photo_url, height: 0.5, crop: :fill %>)">
-        <div class="project-name">
-          <%= link_to project.name, project_path(project), class: "link-project"%>
+      <% if project.images.blank? %>
+        <div class= "bg-project" style="background-color: #f2934f;">
+          <div class="project-name">
+            <%= link_to project.name, project_path(project), class: "link-project"%>
+          </div>
+          <%= link_to "delete", project_path(project), method: :delete %>
         </div>
-        <% if user_signed_in? %>
-        <%= link_to "delete", project_path(project), method: :delete %>
-        <% end %>
-      </div>
+      <% else %>
+        <div class= "bg-project" style="background-image: linear-gradient(rgba(226,226,226,0.3), rgba(226,226,226,0.3)), url(<%= cl_image_path project.images.first.photo_url, height: 0.5, crop: :fill %>)">
+          <div class="project-name">
+            <%= link_to project.name, project_path(project), class: "link-project"%>
+          </div>
+          <%= link_to "delete", project_path(project), method: :delete %>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
