@@ -8,6 +8,27 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 150px;
 }
 
+.navbar {
+  background: $main-color;
+}
+
+.nav-item {
+  text-transform: uppercase;
+  padding: 0 40px;
+  font-size: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #FFF;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #FFF;
+  opacity: 0.8;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #FFF;
+}
