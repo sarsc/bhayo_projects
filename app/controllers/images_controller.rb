@@ -10,9 +10,15 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
     @image.project = @project
     if @image.save
-      redirect_to project_path(@project)
+      respond_to do |format|
+        format.html { redirect_to project_path(@project) }
+        format.js
+      end
     else
-      render 'new'
+      respond_to do |format|
+        format.html { render 'new' }
+        format.js
+      end
     end
   end
 
