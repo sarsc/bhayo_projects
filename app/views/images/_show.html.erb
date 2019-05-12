@@ -1,0 +1,3 @@
+<div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %> </div>
+<%= link_to 'edit', edit_image_path(image) %>
+<%= link_to "delete", image_path(image), method: :delete %>

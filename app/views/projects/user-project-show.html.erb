@@ -13,18 +13,17 @@
       </div>
     </div>
     <div class="image-form">
-      <%= render '/images/form' %>
+
+      <%= render 'images/form', project: @project, image: @image %>
     </div>
   </div>
   <div class="right-section">
 
     <div class="images-container">
-      <div>
-      <% @project.images.each do |image| %>
-        <div> <%= cl_image_tag image.photo_url, height: 400, crop: :fill %></div>
-         <%= link_to 'edit', edit_image_path(image) %>
-         <%= link_to "delete", image_path(image), method: :delete %>
-      <% end %>
+      <div id="images">
+        <% @project.images.each do |image| %>
+          <%= render 'images/show', image: image%>
+        <% end %>
       </div>
     </div>
   </div>
