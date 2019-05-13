@@ -1,0 +1,9 @@
+.action-link {
+  color: #FFF;
+  opacity: 0.7;
+  &:hover {
+    color:  #FFF;
+    opacity: 1;
+    text-decoration: none;
+  }
+}

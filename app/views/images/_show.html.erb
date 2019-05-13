@@ -1,7 +1,12 @@
-<div> <%= cl_image_tag image.photo_url, class: "project-img"%> </div>
-<%= link_to edit_image_path(image) do  %>
-  <i class="far fa-edit"></i>
-<% end %>
-<%= link_to image_path(image), method: :delete do %>
-  <i class="far fa-times-circle"></i>
-<% end %>
+
+<div class="image-container">
+  <div> <%= cl_image_tag image.photo_url, class: "project-img"%> </div>
+  <div class="img-link">
+    <%= link_to image_path(image), method: :delete do %>
+      <i class="far fa-times-circle action-link"></i>
+    <% end %>
+    <%= link_to edit_image_path(image) do  %>
+      <i class="far fa-edit action-link"></i>
+    <% end %>
+  </div>
+</div>
