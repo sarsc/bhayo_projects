@@ -1,5 +1,3 @@
-
-
 <div class="projects-container">
   <% @projects.each do |project| %>
     <div class="project-card">
@@ -8,14 +6,18 @@
           <div class="project-name">
             <%= link_to project.name, project_path(project), class: "link-project"%>
           </div>
-          <%= link_to "delete", project_path(project), method: :delete %>
+          <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="far fa-times-circle action-link img-link"></i>
+          <% end %>
         </div>
       <% else %>
         <div class= "bg-project" style="background-image: linear-gradient(rgba(226,226,226,0.3), rgba(226,226,226,0.3)), url(<%= cl_image_path project.images.first.photo_url, height: 0.5, crop: :fill %>)">
           <div class="project-name">
             <%= link_to project.name, project_path(project), class: "link-project"%>
           </div>
-          <%= link_to "delete", project_path(project), method: :delete %>
+          <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="far fa-times-circle action-link img-link"></i>
+          <% end %>
         </div>
       <% end %>
     </div>

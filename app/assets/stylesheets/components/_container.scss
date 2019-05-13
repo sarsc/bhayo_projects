@@ -6,6 +6,7 @@
   grid-row-gap: 70px;
   // grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   margin: 40px 80px;
+  position: relative;
 }
 
 .projects-container::before {
