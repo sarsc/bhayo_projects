@@ -1,19 +1,20 @@
-<h1>PROJECT</h1>
-<div class="sections-container">
+<div class="main-container">
+  <h2><%= @project.name %></h2>
+  <%= link_to "Edit Project", edit_project_path(@project) %>
+  <div class="sections-container">
   <div class="left-section">
     <div class="project-info-section">
-      <%= link_to "edit", edit_project_path(@project) %>
-      <div>
-        <h2><%= @project.name %></h2>
-        <p><%= @project.client %></p>
-        <p><%= @project.category %></p>
+      <div class="p-info">
+        <div>
+          <p>Client / <%= @project.client %></p>
+          <p>Category / <%= @project.category %></p>
+        </div>
         <div>
           <p><%= @project.description %></p>
         </div>
       </div>
     </div>
     <div class="image-form">
-
       <%= render 'images/form', project: @project, image: @image %>
     </div>
   </div>
@@ -27,6 +28,8 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>
 
 
