@@ -1,8 +1,7 @@
 .navbar-b {
-  justify-content: space-between;
+  // justify-content: space-between;
   background: transparent;
   transition: 0.5s background-color ease;
-
 }
 
 .navbar-b .navbar-collapse {
@@ -35,7 +34,7 @@
   color: #FFF;
 }
 
-// .navbar-home {
-//   background: transparent;
-//   transition: 0.5s background-color ease;
-// }
+.logo-left {
+  position: fixed;
+  left: 20px;
+}
