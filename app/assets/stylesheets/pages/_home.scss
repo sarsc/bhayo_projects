@@ -1,1 +1,5 @@
-// Specific CSS for your home-page
+.bg-container {
+  background: asset-url('bg.jpg');
+  height: 100vh;
+  background-size: cover;
+}
