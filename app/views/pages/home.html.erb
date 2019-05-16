@@ -1,13 +1,13 @@
+<%= content_for :navigation, render('shared/custom-navbar') %>
 <div class="bg-container">
   <h1>Bhayo</h1>
 </div>
-  <%= link_to "Projects", projects_path %>
 
-  <dib class="filters">
-    <%= link_to "Landscape design", projects_path(category: "Landscape design") %>
-    <%= link_to "Urban and Planning design", projects_path(category: "Urban and Planning design") %>
-    <%= link_to "Interior design", projects_path(category:"Interior design") %>
-    <%= link_to "Events and Festivals", projects_path(category: "Events and Festivals") %>
-    <%= link_to "Corporate", projects_path(category: "Corporate") %>
-  </dib>
-
+<%= link_to "Projects", projects_path %>
+<div class="filters">
+  <%= link_to "Landscape design", projects_path(category: "Landscape design") %>
+  <%= link_to "Urban and Planning design", projects_path(category: "Urban and Planning design") %>
+  <%= link_to "Interior design", projects_path(category:"Interior design") %>
+  <%= link_to "Events and Festivals", projects_path(category: "Events and Festivals") %>
+  <%= link_to "Corporate", projects_path(category: "Corporate") %>
+</div>

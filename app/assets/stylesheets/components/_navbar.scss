@@ -1,15 +1,15 @@
-.navbar-lewagon {
+.navbar-b {
   justify-content: space-between;
   background: transparent;
   transition: 0.5s background-color ease;
 
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-b .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-b .navbar-brand img {
   width: 150px;
 }
 
@@ -34,3 +34,8 @@
 .navbar-light .navbar-nav .active > .nav-link {
   color: #FFF;
 }
+
+// .navbar-home {
+//   background: transparent;
+//   transition: 0.5s background-color ease;
+// }
