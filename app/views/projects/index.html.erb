@@ -2,7 +2,7 @@
   <% @projects.each do |project| %>
     <div class="project-card">
       <% if project.images.blank? %>
-        <div class= "bg-project" style="background-color: #f2934f;">
+        <div class= "bg-project" style="background-color: #a1d1fc;">
           <div class="project-name">
             <%= link_to project.name, project_path(project), class: "link-project"%>
           </div>
