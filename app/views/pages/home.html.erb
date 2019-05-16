@@ -5,11 +5,29 @@
   </div>
 </div>
 
-<%= link_to "Projects", projects_path %>
-<div class="filters">
-  <%= link_to "Landscape design", projects_path(category: "Landscape design") %>
-  <%= link_to "Urban and Planning design", projects_path(category: "Urban and Planning design") %>
-  <%= link_to "Interior design", projects_path(category:"Interior design") %>
-  <%= link_to "Events and Festivals", projects_path(category: "Events and Festivals") %>
-  <%= link_to "Corporate", projects_path(category: "Corporate") %>
+<div class="main-container">
+  <div class="intro">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+
+  <div class="filters projects-container">
+    <div class="project-card">
+      <%= link_to "Landscape design", projects_path(category: "Landscape design") %>
+    </div>
+    <div class="project-card">
+      <%= link_to "Urban and Planning design", projects_path(category: "Urban and Planning design") %>
+    </div>
+    <div class="project-card">
+      <%= link_to "Interior design", projects_path(category:"Interior design") %>
+    </div>
+    <div class="project-card">
+      <%= link_to "Events and Festivals", projects_path(category: "Events and Festivals") %>
+    </div>
+    <div class="project-card">
+      <%= link_to "Corporate", projects_path(category: "Corporate") %>
+    </div>
+  </div>
+
 </div>
