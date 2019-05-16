@@ -6,8 +6,10 @@
           <div class="project-name">
             <%= link_to project.name, project_path(project), class: "link-project"%>
           </div>
-          <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="far fa-times-circle action-link img-link"></i>
+          <% if user_signed_in? %>
+            <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-times-circle action-link img-link"></i>
+            <% end %>
           <% end %>
         </div>
       <% else %>
@@ -15,8 +17,10 @@
           <div class="project-name">
             <%= link_to project.name, project_path(project), class: "link-project"%>
           </div>
-          <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="far fa-times-circle action-link img-link"></i>
+          <% if user_signed_in? %>
+            <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="far fa-times-circle action-link img-link"></i>
+            <% end %>
           <% end %>
         </div>
       <% end %>
