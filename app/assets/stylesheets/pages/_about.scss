@@ -1,6 +1,7 @@
 .about-info-container, .middle-section {
   display: flex;
 }
+
 .about-text {
   p {
     padding-bottom: 20px;
@@ -38,4 +39,8 @@
 }
 .middle {
   background-color: rgba(161, 209, 252, 0.3);
+}
+
+.top-section {
+  margin-bottom: 120px;
 }
