@@ -2,14 +2,34 @@
   margin-bottom: 40px;
 }
 
-.contact-form {
-
+.container-sections {
+  height: 100vh;
 }
-
-.sections-container {
+.container-sections, .section-rigth, .section-left {
   display: flex;
 }
 
 .section-rigth, .section-left{
-  width: 50%;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0 95px;
 }
+
+.section-left {
+  h1 {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+}
+
+.section-rigth {
+  font-size: 30px;
+  text-align: center;
+  background-color: rgba(161, 209, 252, 0.5);
+}
+
+ .form-section {
+  width: 100%;
+  padding: 30px;
+ }
