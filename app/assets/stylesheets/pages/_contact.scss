@@ -4,6 +4,9 @@
 
 .container-sections {
   height: 100vh;
+  h1, p {
+    opacity: 0.8;
+  }
 }
 .container-sections, .section-rigth, .section-left {
   display: flex;
