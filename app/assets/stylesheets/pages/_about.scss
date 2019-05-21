@@ -18,10 +18,24 @@
 
 .about-title {
   text-align: center;
-  margin-bottom: 80px;
+  margin: 120px;
 }
 
 .middle-section {
   justify-content: space-between;
-  padding: 200px 0;
+  font-size: 30px;
+  margin-bottom: 70px;
+  p {
+    opacity: 0.8;
+  }
+}
+
+.attr {
+  background-color: rgba(161, 209, 252, 0.5);
+  padding: 150px 0;
+  width: 100%;
+  text-align: center;
+}
+.middle {
+  background-color: rgba(161, 209, 252, 0.3);
 }
