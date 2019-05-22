@@ -13,5 +13,22 @@
 }
 
 .filters {
-  margin-top: 300px;
+  margin: 300px 0;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-1, .card-2, .card-3 {
+  background-size: cover;
+}
+
+.card-1 {
+  background-image: linear-gradient(rgba(226,226,226,0.3), rgba(226,226,226,0.3)), url('card-1.jpg'),;
+}
+
+.card-2 {
+  background-image: linear-gradient(rgba(226,226,226,0.3), rgba(226,226,226,0.3)), url('card-2.jpg');
+}
+
+.card-3 {
+  background-image: linear-gradient(rgba(226,226,226,0.3), rgba(226,226,226,0.3)), url('card-3.jpg');
 }

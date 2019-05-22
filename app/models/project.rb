@@ -4,7 +4,4 @@ class Project < ApplicationRecord
 
   include PgSearch
   pg_search_scope :search_by_category, against: :category
-    # using: {
-    #   tsearch: { prefix: true } # <-- now `superman batm` will return something!
-    # }
 end
