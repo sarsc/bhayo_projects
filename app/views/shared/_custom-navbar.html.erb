@@ -14,13 +14,13 @@
     <ul class="navbar-nav mr-auto">
 
        <li class="nav-item active">
-          <%= link_to "Projects", projects_path, class: "nav-link" %>
+          <%= link_to "Projects", projects_path, class: "navbar-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "About", "#", class: "nav-link my-link" %>
+          <%= link_to "About", pages_about_path, class: "navbar-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Contact", "#", class: "nav-link" %>
+          <%= link_to "Contact", pages_contact_path, class: "navbar-link" %>
         </li>
       <% if user_signed_in? %>
 

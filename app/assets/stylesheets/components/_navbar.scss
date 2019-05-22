@@ -13,6 +13,12 @@
 
 .navbar-home {
   background: white;
+  .navbar-link {
+    color: $main-color;
+    &:hover {
+      color: $main-color;
+    }
+  }
 }
 .navbar-color {
   justify-content: space-between;
@@ -40,4 +46,13 @@
 .logo-left {
   position: fixed;
   left: 20px;
+}
+
+
+.navbar-link {
+  color: #FFF;
+  text-decoration: none;
+  &:hover {
+    color: #FFF;
+  }
 }
